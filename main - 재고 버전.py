@@ -6,6 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from discord_components import DiscordComponents, Button, ButtonStyle, Select, SelectOption
 
+
 ID = 'woo071002'
 PW = 'tjddn1002@'
 
@@ -728,5 +729,6 @@ async def on_button_click(interaction):
             await cnl.send(embed=embed)
             await asyncio.sleep(5)
             await cnl.delete()
-
-client.run(token)
+            
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
